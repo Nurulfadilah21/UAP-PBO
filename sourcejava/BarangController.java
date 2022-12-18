@@ -12,45 +12,38 @@ public class BarangController {
     private Label Brgname;
 
     @FXML
-    private Label Brgprice;
+    private Label Hrgname;
 
     @FXML
-    private Label brgJml;
+    private Label jmlname;
 
     @FXML
-    private TextField discBrg;
+    private Label discBrg;
 
     @FXML
-    private Label expDateBrg;
+    private Label dateExp;
 
     @FXML
-    private TextField idBarang;
+    private Button keAdd;
 
     @FXML
-    private TextField hargaBarang;
+    private TextField del111;
 
     @FXML
-    private TextField jumlahBrg;
+    private Button kembali;
 
     @FXML
-    private Label barcodeBrg;
-
-    @FXML
-    private TextField expBrg;
-
-    @FXML
-    private Button addBrg;
-
-    @FXML
-    private Button delBrg;
-
-    @FXML
-    void hapusBrg(ActionEvent event) {
+    void addData(ActionEvent event) {
 
     }
 
     @FXML
-    void tambahData(ActionEvent event) {
+    void hpsBrg(ActionEvent event) {
+
+    }
+
+    @FXML
+    void kePrgrmKsr(ActionEvent event) {
 
     }
 
