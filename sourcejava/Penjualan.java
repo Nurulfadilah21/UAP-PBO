@@ -11,40 +11,54 @@ import java.util.ArrayList;
  *
  * @author Lenovo
  */
-public class Penjualan {
-    private int id_transaksi;
-    private int jumlahProduk;
-    private int stok;
-    private String nama_produk;
-    private ArrayList<Produk> pr = new ArrayList<>();
     
-    public Penjualan(int id_transaksi) {
-        this.id_transaksi = id_transaksi;
+public Penjualan(){
     }
 
-    public Penjualan(int jumlahproduk, int stok) {
-        this.jumlahproduk = jumlahproduk;
-        this.stok = stok;
+public Penjualan(int id_transaksi) {
+     this.id_transaksi = id_transaksi;
     }
-   
-    public Penjualan(int id_transaksi, int jumlahProduk, int stok) {
+
+public Penjualan(int id_transaksi, int jumlahProduk, int stok) {
+     this.id_transaksi = id_transaksi;
+     this.jumlahProduk = jumlahProduk;
+     this.stok = stok;
+    }
+
+public Penjualan(int id_transaksi, int jumlahProduk, int stok, String produk) {
+     this.id_transaksi = id_transaksi;
+     this.jumlahProduk = jumlahProduk;
+     this.stok = stok;
+     this.nama_produk=produk;
+    }
+
+public Penjualan(int jumlahProduk, int stok) {
+     this.jumlahProduk = jumlahProduk;
+     this.stok = stok;
+    }
+
+public ArrayList<Produk> getListProduk() {
+        return listProduk;
+    }
+
+public int getId_transaksi() {
+        return id_transaksi;
+    }
+
+    public void setId_transaksi(int id_transaksi) {
         this.id_transaksi = id_transaksi;
+    }
+    
+    public void setListProduk(ArrayList<Produk> listProduk) {
+        this.listProduk = listProduk;
+    }
+
+    public int getJumlahProduk() {
+        return jumlahProduk;
+    }
+
+    public void setJumlahProduk(int jumlahProduk) {
         this.jumlahProduk = jumlahProduk;
-        this.stok = stok;
-    }
-    public Penjualan(int id_transaksi, int jumlahProduk, int stok, String produk) {
-        this.id_transaksi = id_transaksi;
-        this.jumlahProduk = jumlahProduk;
-        this.stok = stok;
-        this.nama_produk=produk;
-    }
-
-    public int getJumlahproduk() {
-        return jumlahproduk;
-    }
-
-    public void setJumlahproduk(int jumlahproduk) {
-        this.jumlahproduk = jumlahproduk;
     }
 
     public int getStok() {
@@ -54,7 +68,7 @@ public class Penjualan {
     public void setStok(int stok) {
         this.stok = stok;
     }
-    
+
     public String getNama_produk() {
         return nama_produk;
     }
@@ -73,5 +87,4 @@ public class Penjualan {
     public void hitungHargaProduk(){
         
     }
-    
 }
