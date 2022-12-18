@@ -10,22 +10,22 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uap_pbo.ProgramKasirController">
    <children>
-      <Button layoutX="367.0" layoutY="190.0" mnemonicParsing="false" text="Barang">
+      <Button fx:id="btnBrg" layoutX="367.0" layoutY="190.0" mnemonicParsing="false" onAction="#keBrg" text="Barang">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Button layoutX="110.0" layoutY="190.0" mnemonicParsing="false" text="Makanan">
+      <Button fx:id="btnfood" layoutX="110.0" layoutY="190.0" mnemonicParsing="false" onAction="#keMakanan" text="Makanan">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Label layoutX="81.0" layoutY="44.0" text="Program Kasir">
+      <Label fx:id="prgksr" layoutX="81.0" layoutY="44.0" text="Program Kasir">
          <font>
             <Font name="Engravers MT" size="36.0" />
          </font>
       </Label>
-      <Label layoutX="250.0" layoutY="98.0" text="Pilihan Menu" textFill="#262c2b">
+      <Label fx:id="pilMenu" layoutX="247.0" layoutY="121.0" text="Pilihan Menu" textFill="#262c2b">
          <font>
             <Font name="Serif Regular" size="14.0" />
          </font>
