@@ -1,20 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package uap_pbo;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author Lenovo
- */
 public class Barang extends Produk {
     private String barcode;
     private String expired;
     private ArrayList<Kategori> kategori = new ArrayList<>();
+    
+    public Barang() {
+    }
     
     public Barang(String nama_produk, double harga) {
         super(nama_produk, harga);
