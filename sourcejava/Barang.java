@@ -43,12 +43,17 @@ public class Barang extends Produk {
         return true;
     }
     
-//    public addKategori(){
-//        return true;
-//            
-//    }    
     
+   public void addKategori(Kategori k){
+        kategori.add(k);
+    }
+   
+   public void setKategori(ArrayList<Kategori> kategori) {
+        this.kategori = kategori;
+    }
     
-    
+   public ArrayList<Kategori> getKategori() {
+        return kategori;
+    }
             
 }
