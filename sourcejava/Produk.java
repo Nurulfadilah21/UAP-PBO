@@ -1,20 +1,24 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package uap_pbo;
 
-/**
- *
- * @author Lenovo
- */
 public class Produk {
-    private String nama_produk;
+private String nama_produk;
     private double harga;
     private int jumlah;
     private double diskon;
 
+    public Produk() {
+    }
+
+    public Produk(String nama_produk) {
+        this.nama_produk = nama_produk;
+    }
+
+    public Produk(String nama_produk, double harga) {
+        this.nama_produk = nama_produk;
+        this.harga = harga;
+    }
+    
     public Produk(String nama_produk, double harga, int jumlah, double diskon) {
         this.nama_produk = nama_produk;
         this.harga = harga;
@@ -53,8 +57,7 @@ public class Produk {
     public void setDiskon(double diskon) {
         this.diskon = diskon;
     }
-    
-//    private double hargaDiskon(){
-//        innt
-//    }
+    private void hargaDiskon(){
+        harga=this.harga-this.harga;
+    }
 }
