@@ -12,6 +12,19 @@ package uap_pbo;
 public class Makanan extends Produk {
     private int id;
     private int daya_tahan;
+    
+    public Makanan(int id, String nama_produk) {
+        super(nama_produk);
+        this.id = id;
+    }
+
+    public Makanan(String nama_produk, double harga) {
+        super(nama_produk, harga);
+    }
+
+    public Makanan(int id) {
+        this.id = id;
+    }
 
     public Makanan(int id, int daya_tahan, String nama_produk, double harga, int jumlah, double diskon) {
         super(nama_produk, harga, jumlah, diskon);
