@@ -1,4 +1,6 @@
-package dbHelper;
+package db;
+import db.BarangModel;
+import db.dbHelper;
 import java.sql.Connection;
 import uap_pbo.Makanan;
 import java.sql.Connection;
@@ -19,7 +21,7 @@ public class MakananModel {
     }
     public void addMakanan(Makanan  mkn){
         String insert = "INSERT INTO makanan VALUES ('"
-                + mkn.getId() + "', '" + mkn.getNama_produk()+ "', '" + mkn.getHarga() + "', '" + mkn.getJumlah() + "', '" + mkn.getDiskon()+"', '"+mkn.getDaya_tahan()+"');";
+                 + mkn.getNama_produk()+ "', '" + mkn.getHarga() + "', '" + mkn.getJumlah() + "', '" + mkn.getDiskon()+"', '"+mkn.getDaya_tahan()+"');";
         System.out.println(insert);
         try {
            if( CONN.createStatement().executeUpdate(insert)>0){
@@ -48,7 +50,7 @@ public class MakananModel {
 //     }
      
      public void deleteMakanan(Makanan mkn){
-        String delete = "DELETE FROM makanan WHERE id = '"+ mkn.getId()+"';";
+        String delete = "DELETE FROM makanan WHERE nama = '"+ mkn.getNama_produk()+"';";
         
          try {
            if( CONN.createStatement().executeUpdate(delete)>0){
