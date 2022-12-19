@@ -1,4 +1,4 @@
-package dbhelper;
+package db;
 import java.sql.Connection;
 import uap_pbo.Barang;
 import java.sql.Connection;
@@ -19,7 +19,7 @@ public class BarangModel {
     }
     public void addBarang(Barang  brg){
         String insert = "INSERT INTO barang VALUES ('"
-                + brg.getBarcode() + "', '" + brg.getNama_produk()+ "', '" + brg.getHarga() + "', '" + brg.getJumlah() + "', '" + brg.getDiskon()+"');";
+                + brg.getNama_produk()+ "', '" + brg.getHarga() + "', '" + brg.getJumlah() + "', '" + brg.getDiskon()+"', '" + brg.getExpired()+"');";
         System.out.println(insert);
         try {
            if( CONN.createStatement().executeUpdate(insert)>0){
@@ -33,9 +33,22 @@ public class BarangModel {
         }
     }
     
+//     public void updateBarang(Barang brg){//untuk memperbarui data pada query
+//        String update = "UPDATE barang SET barcode = '"+ brg.getBarcode() +"', expired = '"+ brg.getExpired() +"' WHERE barcode = '"+brg.getBarcode()+"';";
+//        try {
+//           if( CONN.createStatement().executeUpdate(update)>0){
+//            System.out.println("Data Berhasil Diperbarui");
+//           }else{
+//               System.out.println("Data yang dimasukkan tidak berubah");
+//           }     
+//        } catch (SQLException ex) {
+//            Logger.getLogger(BarangModel.class.getName()).log(Level.SEVERE, null, ex);
+//            System.out.println("Data Gagal Dimasukkan");
+//        }
+//     }
      
      public void deleteProduk(Barang brg){
-        String delete = "DELETE FROM barang WHERE barcode = '"+ brg.getBarcode()+"';";
+        String delete = "DELETE FROM barang WHERE nama = '"+ brg.getNama_produk()+"';";
         
          try {
            if( CONN.createStatement().executeUpdate(delete)>0){
